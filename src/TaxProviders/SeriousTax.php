@@ -19,7 +19,7 @@ class SeriousTax extends TaxAbstract implements TaxInterface
         $this->location = new Location($this->taxDTO->country_code, $this->taxDTO->state);
     }
 
-    public function getTaxesIfo(): void
+    public function getTaxesInfo(): void
     {
         try {
             $cacheKey = $this->generateCacheKey();

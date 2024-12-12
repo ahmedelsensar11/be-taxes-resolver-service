@@ -15,7 +15,7 @@ class BeeTax extends TaxAbstract implements TaxInterface
         $this->taxBee = new TaxBee();
     }
 
-    public function getTaxesIfo(): void
+    public function getTaxesInfo(): void
     {
         try {
             $cacheKey = $this->generateCacheKey();

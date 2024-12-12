@@ -3,5 +3,5 @@ namespace App\Interfaces;
 
 interface TaxInterface
 {
-    public function getTaxesIfo();
+    public function getTaxesInfo();
 }

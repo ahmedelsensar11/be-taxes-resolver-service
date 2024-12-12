@@ -33,7 +33,7 @@ readonly class TaxesController
             $dto = new TaxDTO(country_code: $country, state: $state, city: $city, street: $street, postcode: $postcode);
             $taxProvider = $this->taxFactory->make($dto);
             $taxProvider->setCache($cache);
-            $taxProvider->getTaxesIfo();
+            $taxProvider->getTaxesInfo();
             return JsonResponseHelper::success($taxProvider->responseDTO->message, $taxProvider->responseDTO->data);
         } catch (\Exception $e){
             return JsonResponseHelper::error($e->getMessage());
